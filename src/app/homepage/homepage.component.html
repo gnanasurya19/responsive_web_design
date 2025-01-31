@@ -1,0 +1,130 @@
+<div class="m-home__main">
+    <div class="m-home__header_wrapper">
+        <div class="m-home__header">
+            <div class="m-home__titlecontainer">
+                <h1 class="c-home_title">
+                    CommunityHub
+                </h1>
+            </div>
+            <div class="m-home__searchbar">
+                <i class="fa-solid fa-magnifying-glass c-search_icon"></i>
+                <input type="text" class="c-home_searchbar_input" placeholder="Search...">
+            </div>
+            <div class="m-home__options">
+                <div class="c-goLive_btn">
+                    <i class="fa-solid fa-wifi"></i>
+                    <h5>Go Live</h5>
+                </div>
+                <button class="c-setting_btn">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+                <button class="c-notification_btn">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+                <img class="c-profile_img" src="assets/images/profile_1.png" alt="profile image">
+                <h5 class="c-username">Evelyn</h5>
+                <i class="fa-solid fa-chevron-down c-down-arrow"></i>
+            </div>
+        </div>
+    </div>
+    <div class="m-home__page_body">
+        <div class="m-home__left_container">
+            <div class="m-home__left_drawer_wrapper">
+                <div class="m-home__left_drawer">
+                    <h3 class="c-drawer_title">MENU</h3>
+                    @for(menu of drawerMenus;track menu.menuId){
+                    <div class="m-home__menuitem_container pointer"
+                        [ngClass]="{'selected_menuitem':selectedMenu==menu.menuName}"
+                        (click)="selectMenu(menu.menuName)">
+                        <div class="m-home__menutitle_icon_wrapper">
+                            <i class="{{menu.icon}} c-menuitem_icon"></i>
+                            <h3 class="c-menuitem_title">{{menu.menuName}}</h3>
+                        </div>
+                        @if(menu.subMenus && selectedMenu ==menu.menuName ){
+                        <i class="fa-solid fa-chevron-up c-up-arrow"></i>
+                        }
+                    </div>
+                    @if (menu.subMenus!=null && selectedMenu ==menu.menuName) {
+                    <div class="m-home__submenus_item_container">
+                        @for (submenu of menu.subMenus; track $index) {
+                        <div class="m-home__submenus_item pointer" [ngClass]="{'selected':selectedSubmenu==submenu}"
+                            (click)="selectSubmenu(submenu)">
+                            <p class="c-submenu_title">{{submenu}}</p>
+                        </div>
+                        }
+                    </div>
+                    }
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="m-home__right_container">
+            <div class="m-home__suggetion_bar">
+                <div class="m-home__suggetion_bar_header">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    <i class="fa-solid fa-filter"></i>
+                </div>
+                <h2 class="c-suggetion_title">The Witcher 3:Wild Hunt</h2>
+                <p class="c-suggtion_content">The Witcher 3 is an immersive action role-playing games a.vast open world,
+                    featuring Qdeep narrative and Stugning visuals, developed by CD Projekt Red.</p>
+                <div class="m-home__suggestion_details">
+                    <img src="/assets/svg/frequency_white.svg" alt="radio" class="stream_detail_icon">
+                    <p class="c-stream_detail">232,9K</p>
+                    <img src="/assets/svg/eye_outline.svg" alt="radio" class="stream_detail_icon">
+                    <p class="c-stream_detail">19.6M</p>
+                </div>
+                <div class="m-home__suggestion_category">
+                    @for (item of categories; track $index) {
+                    <p class="c-suggestion_category_container">{{item}}</p>
+                    }
+                </div>
+            </div>
+            <div class="m-home__content">
+                <div class="m-home__content__header_wrapper">
+                    <div class="m-home__content_types pointer">
+                        @for (content of contentTypes; track $index) {
+                        <div class="c-content_type_text" [ngClass]="{'selected':content == selectedContentType}"
+                            (click)="selectContentType(content)">
+                            <p>{{content}}</p>
+                            @if (content == selectedContentType) {
+                            <div class="c-underline"></div>
+                            }
+                        </div>
+                        }
+                    </div>
+                    <div class="m-home__sortby_wrapper">
+                        <p class="c-sortby_text">Sort by:</p>
+                        <div class="m-home__sortby_selection_container pointer">
+                            <p>Most Viewed Clips</p>
+                            <i class="fa-solid fa-chevron-down c-down-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-home__content_title_row" title="Most Viewed">
+                    <h1 class="c-content_title">Most Viewed Clips</h1>
+                    <p class="c-seeall_text pointer">See all</p>
+                </div>
+                <div class="m-home__content_card_wrapper">
+                    @for (detail of contentDetails; track $index) {
+                    <div class="m-home__content_card">
+                        <div class="m-home__content_cardimage">
+                            <img [src]="detail.imagePath" alt="image" class="c-content_cardimage">
+                            <p class="c-duration">{{detail.duration}}</p>
+                        </div>
+                        <div class="m-home__content_detail">
+                            <h3 class="c-content_title">{{detail.contentTitle}}</h3>
+                            <p class="c-content_views_row">{{detail.views}} Views . {{detail.date}} days ago</p>
+                            <div class="m-home__content_uploder_detail">
+                                <img class="c-uploader_profile" src="/assets/images/profile_1.png" alt="">
+                                <h6>{{detail.uploadedby}}</h6>
+                                <img class="c-content_verified" src="/assets/svg/verified.svg" alt="verified">
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+                <button (click)="navToFoco()">Go to Foco</button>
+            </div>
+        </div>
+    </div>
+</div>

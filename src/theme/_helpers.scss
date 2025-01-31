@@ -1,0 +1,123 @@
+// flex box
+
+@mixin flex-v-align-center-sb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin u-flex-v-align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin u-flex-h-align-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin u-flex-h-between-space {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin u-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin u-flex-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin u-flex-direction {
+    flex-direction: column;
+}
+
+@mixin flexColumn($per) {
+    flex: $per;
+}
+
+// grid
+@mixin u-flex-blocks {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin grid($col, $margin) {
+    width: calc((100% - ((#{$col} - 1) * #{$margin})) / #{$col});
+    margin-right: $margin;
+
+    &:nth-child(#{$col}n) {
+        margin-right: 0;
+    }
+}
+
+// circle
+
+@mixin circle($height, $width) {
+    height: #{$height};
+    width: #{$width};
+    border-radius: 50%;
+}
+
+// break points
+
+
+
+// box shadow
+
+@mixin boxshadow($x, $y, $blur, $spread, $color) {
+    box-shadow: #{$x},
+    #{$y},
+    #{$blur},
+    #{$spread},
+    #{$blur};
+}
+
+@mixin boxshadowinset($x, $y, $blur, $spread, $color, $position) {
+    box-shadow: #{$x},
+    #{$y},
+    #{$blur},
+    #{$spread},
+    #{$blur},
+    #{$position};
+}
+
+// borders
+
+@mixin border($width, $type, $color) {
+    border: #{$width} #{$type} #{$color};
+}
+
+// background image
+
+@mixin bg-img {}
+
+// input placeholder
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {
+        @content;
+    }
+
+    :-moz-placeholder {
+        @content;
+    }
+
+    ::-moz-placeholder {
+        @content;
+    }
+
+    :-ms-input-placeholder {
+        @content;
+    }
+}
+
+
+@mixin u-flex{
+    display: flex;
+}

@@ -1,0 +1,114 @@
+<div class="m-food_order__main">
+    <div class="m-food_order__header_wrapper">
+        <div class="m-food_order__header">
+            <div class="m-food_order__logo">
+                <img class="c-logo" src="/assets/images/logo.png" alt="logo">
+            </div>
+            <div class="m-food_order__navigation_links">
+                <h2 class="c-header_navlink pointer" *ngFor="let item of navLink"
+                    [ngClass]="{'selected':selectedPage==item}" (click)="changePage(item)">{{item}}</h2>
+            </div>
+            <div class="m-food_order__searh_cart_wrapper">
+                <img src="/assets/svg/search.svg" class="c-header_icon pointer" alt="search">
+                <div class="m-food_order__cart pointer">
+                    <img src="/assets/svg/basket.svg" class="c-header_icon" alt="cart">
+                    <p class="c-cart_bardge"></p>
+                </div>
+            </div>
+            <div class="m-food_order__header_btns">
+                <button class="m-food_order__navbtn pointer">
+                    <img src="/assets/svg/signup.svg" class="c-header_icon" alt="signup">
+                    <p class="c-navbtn_text">Sign in</p>
+                </button>
+                <button class="m-food_order__navbtn pointer">
+                    <img src="/assets/svg/login.svg" class="c-header_icon" alt="login">
+                    <p class="c-navbtn_text">login</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="m-food_order__content_wrapper">
+        <div class="m-food_order__content">
+            <div class="m-food_order__right_container">
+                <div class="m-food_order__detail">
+                    <h1 class="c-detail_row1">Order Your</h1>
+                    <h3 class="c-detail_row2">favorite Foods</h3>
+                    <p class="c-detail_food_description">Fresn and tasty seat00d curry Sit amet, consectetur
+                        Curabitur accumsan auctor pulvinar proin sit amet</p>
+                    <div class="m-food_order__total_order_wrapper">
+                        <p class="c-total_order_text">Total Order :</p>
+                        <h4 class="c-total_price_text"> $24.30</h4>
+                    </div>
+                    <div class="m-food_order__count_buy_btnwrapper">
+                        <div class="m-food_order__product_count">
+                            <img src="/assets/svg/arrowhead-down.svg" class="c-product_count_arrow pointer" alt=""  (click)="decreaseProductCount()">
+                            <div class="c-row_divider"></div>
+                            <h3 class="c-product_count">{{productCount}}</h3>
+                            <div class="c-row_divider"></div>
+                            <img src="/assets/svg/arrowhead-up.svg" class="c-product_count_arrow pointer" alt="" (click)="increaseProductCount()">
+                        </div>
+                        <div class="m-food_order__buybtn">
+                            <div class="c-buy_icon_container">
+                                <img class="c-buy_icon" src="/assets/svg/shopping-bag.svg" alt="">
+                            </div>
+                            <h3 class="c-buy_text">Buy Now</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-food_order__swiper">
+                    <button class="c-swiper_navbtn" (click)="swipePrev()">
+                        <img class="c-swipper_arrow" src="/assets/svg/arrow_left.svg" alt="">
+                    </button>
+                    <div class="m-food_order__swiper_wrapper">
+                        <swiper-container [slidesPerView]="3" loop="true"  #swiperInstance>
+                            @for (item of foodsSwiperList; track $index) {
+                            <swiper-slide>
+                                <div class="m-food_order__swiper_element_wrapper">
+                                    <div class="m-food_order__swiper_element"
+                                        [style]="{'background-color': item.bgColor}">
+                                        <div class="m-food_order__swiper_detail_wrapper">
+                                            <div class="m-food_order__swiper_element_detail">
+                                                <div class="m-food_order__image_container">
+                                                    <img [src]="item.imagePath" alt="food" class="c-swiper_img">
+                                                </div>
+                                                <h3 class="c-food_title">{{item.title}}</h3>
+                                                <h4 class="c-food_price">
+                                                    <p class="c-dollarsymbol">$</p>{{item.price}}
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                            }
+                        </swiper-container>
+                    </div>
+                    <button class="c-swiper_navbtn swiper-button-next" (click)="swipeNext()">
+                        <img class="c-swipper_arrow" src="/assets/svg/arrow_right.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="m-food_order__left_container">
+                <div class="m-food_order__food_bowl_img">
+                    <img class="c-food_bowl" src="/assets/images/Saladific-Bowl.png" alt="bowl full of vegetables">
+                </div>
+                <div class="m-food_order__image_bottom_container">
+                    <div class="m-food_order__name_row">
+                        <h3 class="c-food_name">Salad</h3>
+                        <div class="m-food_order__rating">
+                            <img class="c-star" src="/assets/svg/star.svg" alt="star">
+                            <p class="c-rating">4.7</p>
+                        </div>
+                    </div>
+                    <div class="m-food_order__duration_wrapper">
+                        <img class="c-clock" src="/assets/svg/three-o-clock-clock.svg" alt="">
+                        <p class="c-duration">10-18 mins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!-- <div class="m-food_order__background_img">
+    <img src="/assets/images/black_bg.jpg" alt="food">
+</div>   -->
