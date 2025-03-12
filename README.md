@@ -3,7 +3,7 @@
 ![localhost_4200_(Nest Hub)](https://github.com/user-attachments/assets/c014222d-cd33-4689-9f61-e0e7b8066ec5)
 
 <p>
-<img align="left" width="100" height="100" src="https://github.com/user-attachments/assets/9f28b9e1-c748-4f98-8af9-ceffdc94cfe4"> | <img align="right" width="100" height="100" src="https://github.com/user-attachments/assets/b4cd1e7c-541a-47c5-8367-f871472f2e1c"> </p>
+<img src="https://github.com/user-attachments/assets/9f28b9e1-c748-4f98-8af9-ceffdc94cfe4"> | <img src="https://github.com/user-attachments/assets/b4cd1e7c-541a-47c5-8367-f871472f2e1c"> </p>
 
 
 X
