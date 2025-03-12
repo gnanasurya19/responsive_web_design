@@ -1,4 +1,9 @@
 # Web Designs
+![localhost_4200_foco(Nest Hub)](https://github.com/user-attachments/assets/d2f89f55-e940-4092-bca2-1343b6294aca) 
+![localhost_4200_(Nest Hub)](https://github.com/user-attachments/assets/c014222d-cd33-4689-9f61-e0e7b8066ec5)
+
+X
+
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
 
